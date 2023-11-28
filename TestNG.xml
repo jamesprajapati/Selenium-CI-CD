@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+
+    <test name="MyTestClass">
+        <classes>
+            <!-- Specify the package and class names of your test classes -->
+            <class name="org.gaurav.VisitFlipkart"/>
+            <!-- Add more classes as needed -->
+        </classes>
+    </test>
+
+    <!-- You can add more <test> elements to define additional test classes or suites -->
+
+    <!-- TestNG configuration options can be added here, such as listeners, parameters, etc. -->
+
+</suite>
