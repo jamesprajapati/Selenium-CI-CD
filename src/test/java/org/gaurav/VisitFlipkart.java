@@ -3,8 +3,11 @@ package org.gaurav;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -15,27 +18,23 @@ public class VisitFlipkart {
 
     @BeforeMethod
     public void setUp() {
+        // Setup FirefoxDriver with the latest version using WebDriverManager
+        WebDriverManager.firefoxdriver().setup();
 
-        WebDriverManager.chromedriver().clearDriverCache();
-        // Setup ChromeDriver using WebDriverManager
-        WebDriverManager.chromedriver().setup();
-        System.setProperty("webdriver.chrome.driver", WebDriverManager.chromedriver().getDownloadedDriverPath());
-
-        // Create an instance of ChromeDriver
-        driver = new ChromeDriver();
+        // Create an instance of FirefoxDriver
+        driver = new FirefoxDriver();
     }
 
     @Test
-    public void testExample() {
-        // Navigate to a website
-        driver.get("https://www.example.com");
+    public void testFlipkart() {
+        // Navigate to Flipkart
+        driver.get("https://www.flipkart.com/");
 
-        // Perform some actions
-        // ...
+        // Perform some actions (e.g., finding an element)
+        WebElement logo = driver.findElement(By.cssSelector("img[title='Flipkart']"));
 
         // Add your test assertions here
-        // For example, you might use TestNG assertions
-        // Assert.assertEquals(driver.getTitle(), "Expected Title");
+        Assert.assertTrue(logo.isDisplayed(), "Flipkart logo is displayed");
     }
 
     @AfterMethod
