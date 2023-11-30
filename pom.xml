@@ -22,7 +22,7 @@
                 <configuration>
                     <!-- Specify the path to your TestNG XML file -->
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/TestNG.xml</suiteXmlFile>
+                        <suiteXmlFile>TestNG.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <!-- Other configuration options can be added here -->
                 </configuration>
