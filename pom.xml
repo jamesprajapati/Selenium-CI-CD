@@ -19,13 +19,11 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version> <!-- Replace with the latest version available -->
-
                 <configuration>
                     <!-- Specify the path to your TestNG XML file -->
                     <suiteXmlFiles>
-                        <suiteXmlFile>TestNG.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/TestNG.xml</suiteXmlFile>
                     </suiteXmlFiles>
-
                     <!-- Other configuration options can be added here -->
                 </configuration>
             </plugin>
