@@ -37,4 +37,4 @@ jobs:
           java-version: '15'
 
       - name: Run Tests with TestNG
-        run: mvn test -Dtest=YourTestNGTestClass -Dsurefire.suiteXmlFiles=src/test/resources/testng.xml
+        run: mvn test -Dsurefire.suiteXmlFiles=testng.xml
